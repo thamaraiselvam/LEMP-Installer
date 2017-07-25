@@ -1,4 +1,4 @@
-# Quick LEMP Install server secrip
+# Quick LEMP stack Installer srcipt
 
 Script to install the lemp stack on debian based distributions.
 Tested on : Debian, Ubuntu, Linux mint and Raspbian
