@@ -12,7 +12,7 @@ Steps:
 
 That's it :)
 
-Note: Default mysql password is root. you can change it before running on the following lines
+Note: Default mysql password is `root`. you can change it before running in the following lines before running the script
 
 `sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password YOUR_PASSWORD'`
 
