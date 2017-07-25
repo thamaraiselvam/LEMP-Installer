@@ -2,7 +2,7 @@
 #
 # [Quick LEMP install Server Script]
 #
-# GitHub:   https://github.com/Thamaraiselvam/Install-LEMP-On-Ubuntu
+# GitHub:   https://github.com/Thamaraiselvam/quick-lemp-install
 # Author:   Thamaraiselvam
 # URL:      https://thamaraiselvam.com
 #
