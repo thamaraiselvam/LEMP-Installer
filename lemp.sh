@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# [Install LEMP Server Script]
+# [Quick LEMP install Server Script]
 #
 # GitHub:   https://github.com/Thamaraiselvam/Install-LEMP-On-Ubuntu
 # Author:   Thamaraiselvam
