@@ -38,4 +38,4 @@ sudo mv info.php /var/www/html/
 
 echo -e "\n\nLemp stack installed successfully :)\n"
 
-echo -e "\nVisit this link on your browser to check PHP configuration your_ip/info.php"
+echo -e "\n Open following link to check installed PHP configuration your_ip/info.php"
