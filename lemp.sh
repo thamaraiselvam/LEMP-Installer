@@ -9,39 +9,33 @@
 
 
 #updating packages
-echo "Updating package lists..."
+echo -e "\nUpdating package lists..\n"
 sudo apt-get -y update
 
 #install Ngnix
-echo "Installing Ngnix server..."
+echo -e "\nInstalling Ngnix server...\n"
 sudo apt-get -y install nginx
 
 
 #install Mysql server
-echo "Installing Mysql server..."
+echo -e "\nInstalling Mysql server...\n"
 #default password is root
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 sudo apt-get -y install mysql-server
 
 #install Mysql server
-echo "Installing PHP-FPM and Mysql extension for PHP..."
+echo -e "\nInstalling PHP-FPM and Mysql extension for PHP...\n"
 sudo apt-get -y install php-fpm php-mysql
 
 #Move nginx conf file to enable php support on ngnix
-echo "Moving Nginx configuration file..."
+echo -e "\nMoving Nginx configuration file...\n"
 sudo mv default /etc/nginx/sites-available
 
 #Move php testing file
-echo "Moving php testing file..."
-sudo mv info /var/www/html/
+echo -e "\nMoving php testing file...\n"
+sudo mv info.php /var/www/html/
 
-echo "Lemp stack installed successfully :)"
+echo -e "\n\nLemp stack installed successfully :)\n"
 
-echo "If you are on a interwork"
-#get system public IP
-myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
-echo "Visit this link on your browser to check PHP configuration ${myip}/info.php"
-
-echo "If you are on local machine"
-echo "Visit this link on your browser to check PHP configuration localhost/info.php"
+echo -e "\nVisit this link on your browser to check PHP configuration your_ip/info.php"
