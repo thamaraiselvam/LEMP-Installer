@@ -36,6 +36,8 @@ sudo mv default /etc/nginx/sites-available
 echo -e "\nMoving php testing file...\n"
 sudo mv info.php /var/www/html/
 
+sudo systemctl restart nginx.service
+
 echo -e "\n\nLemp stack installed successfully :)\n"
 
 echo -e "\n Open following link to check installed PHP configuration your_ip/info.php"
