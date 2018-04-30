@@ -12,6 +12,9 @@ Steps:
 
 That's it :)
 
+PHP version - v7.0
+Mysql version - Latest Stable
+
 Note: Default mysql password is `root`. you can change it before running in the following lines before running the script
 
 `sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password YOUR_PASSWORD'`
