@@ -13,6 +13,7 @@ Steps:
 That's it :)
 
 PHP version - v7.0
+
 Mysql version - Latest Stable
 
 Note: Default mysql password is `root`. you can change it before running in the following lines before running the script
