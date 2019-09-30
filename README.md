@@ -14,14 +14,14 @@ Tested on : Debian, Ubuntu, Linux mint and Raspbian
 
 Steps:
 
-1. clone thsi repository
+1. clone this repository
 2. `cd quick-lemp-install`
 3. `chmod +x lemp.sh` this command makes bash script executable
 4. `./lemp.sh`
 
 That's it :)
 
-PHP version - v7.0
+PHP version - v7.3
 
 Mysql version - Latest Stable
 
