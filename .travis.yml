@@ -2,8 +2,6 @@ matrix:
   include:
     - os: linux
       dist: bionic
-    - os: linux
-      dist: archlinux
 
 language: bash
 
