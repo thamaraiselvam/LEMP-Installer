@@ -4,29 +4,27 @@
 <a href="https://github.com/thamaraiselvam/LEMP-Installer/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/thamaraiselvam/LEMP-Installer.svg?style=for-the-badge"></a>
 <a href="https://github.com/thamaraiselvam/LEMP-Installer/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/thamaraiselvam/LEMP-Installer.svg?style=for-the-badge"></a>
 
-
-
 <a href="https://www.buymeacoffee.com/R8Nc2vn" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
 
+Supported Operating Systems:
 
-Script to install the lemp stack on debian based distributions.
-Tested on : Debian, Ubuntu, Linux mint and Raspbian
+- Arch
+- Debian
+- Linux mint
+- Raspbian
+- Mac [Feature Request](https://github.com/thamaraiselvam/LEMP-Installer/issues/7) - Feel free to contribute
 
 Steps:
 
-1. clone this repository
-2. `cd quick-lemp-install`
+1. Clone this repository
+2. `cd LEMP-install`
 3. `chmod +x lemp.sh` this command makes bash script executable
-4. `./lemp.sh $YOUR_MYSQL_ROOT_PASSWORD`
+4. `./lemp.sh` or `./lemp.sh $YOUR_MYSQL_ROOT_PASSWORD` (only for debian based distributions)
 
 That's it :)
 
-PHP version - v7.3
+PHP latest version - v7.3
 
 Mysql version - Latest Stable
 
-Note: The default mysql root password will be empty unless you provide it as an argument to the script, like in the example above.
-
-`sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password YOUR_PASSWORD'`
-
-`sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password YOUR_PASSWORD'`
+Note: The default mysql `root` user password is empty unless you provide it as an argument to the script.
