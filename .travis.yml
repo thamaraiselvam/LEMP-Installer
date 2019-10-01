@@ -1,0 +1,10 @@
+dist: bionic
+language: bash
+
+before_install:
+  - sudo apt-get update
+  - sudo sudo apt-get install software-properties-common -y
+
+install:
+  - chmod +x lemp.sh
+  - ./lemp.sh
