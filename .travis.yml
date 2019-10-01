@@ -1,4 +1,8 @@
-dist: bionic
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+
 language: bash
 
 before_install:
@@ -6,5 +10,5 @@ before_install:
   - sudo sudo apt-get install software-properties-common -y
 
 install:
-  - chmod +x lemp.sh
+  - chmod +x lemp.sh installers/debian.sh installers/arch.sh
   - ./lemp.sh

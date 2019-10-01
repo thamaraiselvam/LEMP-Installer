@@ -1,6 +1,6 @@
 server {
     listen 80;
-   
+
     root /var/www/html;
     index index.php index.html index.htm index.nginx-debian.html;
 
@@ -12,7 +12,7 @@ server {
 
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+        fastcgi_pass unix:/run/php/phpcurrentversion-fpm.sock;
     }
 
     location ~ /\.ht {
