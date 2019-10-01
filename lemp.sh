@@ -7,6 +7,7 @@
 # URL:      https://thamaraiselvam.com
 #
 
+MYSQL_ROOT_PASSWORD=$1
 
 #updating packages
 echo -e "\nUpdating package lists..\n"
@@ -19,9 +20,9 @@ sudo apt-get -y install nginx
 
 #install Mysql server
 echo -e "\nInstalling Mysql server...\n"
-#default password is root
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
+#set password from provided arg
+sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $MYSQL_ROOT_PASSWORD"
+sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"
 sudo apt-get -y install mysql-server
 
 #install Mysql server

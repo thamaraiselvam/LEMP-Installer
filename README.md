@@ -14,10 +14,10 @@ Tested on : Debian, Ubuntu, Linux mint and Raspbian
 
 Steps:
 
-1. clone thsi repository
+1. clone this repository
 2. `cd quick-lemp-install`
 3. `chmod +x lemp.sh` this command makes bash script executable
-4. `./lemp.sh`
+4. `./lemp.sh $YOUR_MYSQL_ROOT_PASSWORD`
 
 That's it :)
 
@@ -25,7 +25,7 @@ PHP version - v7.0
 
 Mysql version - Latest Stable
 
-Note: Default mysql password is `root`. you can change it before running in the following lines before running the script
+Note: The default mysql root password will be empty unless you provide it as an argument to the script, like in the example above.
 
 `sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password YOUR_PASSWORD'`
 
