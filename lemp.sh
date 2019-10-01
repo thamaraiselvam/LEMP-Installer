@@ -24,9 +24,13 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 sudo apt-get -y install mysql-server
 
+#add ondrej PPA
+sudo add-apt-repository ppa:ondrej/php -y
+sudo apt-get update
+
 #install Mysql server
 echo -e "\nInstalling PHP-FPM and Mysql extension for PHP...\n"
-sudo apt-get -y install php7.0-fpm php-mysql
+sudo apt-get -y install php7.3-fpm php-mysql
 
 #Move nginx conf file to enable php support on ngnix
 echo -e "\nMoving Nginx configuration file...\n"
