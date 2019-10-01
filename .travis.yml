@@ -1,8 +1,7 @@
 dist: bionic
 
 before_install:
-  - apt-get update
-  - apt-get install sudo -y
+  - sudo apt-get update
   - sudo sudo apt-get install software-properties-common -y
 
 install:
