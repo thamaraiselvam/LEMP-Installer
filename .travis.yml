@@ -7,8 +7,9 @@ language: bash
 
 before_install:
   - sudo apt-get update
-  - sudo sudo apt-get install software-properties-common -y
+  - sudo sudo apt-get install software-properties-common shellcheck -y
 
 install:
-  - chmod +x lemp.sh installers/debian.sh installers/arch.sh
+  - chmod +x lemp.sh lint.sh installers/debian.sh installers/arch.sh
+  - ./lint.sh
   - ./lemp.sh
