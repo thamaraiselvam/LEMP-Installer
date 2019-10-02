@@ -1,5 +1,6 @@
 # Quick LEMP stack Installer srcipt
 
+<a href="https://travis-ci.org/thamaraiselvam/LEMP-Installer"><img alt="GitHub issues" src="https://img.shields.io/travis/thamaraiselvam/LEMP-Installer?style=for-the-badge"></a>
 <a href="https://github.com/thamaraiselvam/LEMP-Installer/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/thamaraiselvam/LEMP-Installer.svg?style=for-the-badge"></a>
 <a href="https://github.com/thamaraiselvam/LEMP-Installer/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/thamaraiselvam/LEMP-Installer.svg?style=for-the-badge"></a>
 <a href="https://github.com/thamaraiselvam/LEMP-Installer/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/thamaraiselvam/LEMP-Installer.svg?style=for-the-badge"></a>
