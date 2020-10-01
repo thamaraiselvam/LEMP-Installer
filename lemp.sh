@@ -33,6 +33,11 @@ findLinuxDistributionAndInstall() {
 
     if grep -q 'debian' /etc/os-release; then
         echo -e "Distribution: Debian"
+
+        # Debian does not have installed per default sudo package, so install first and then run sudo commands
+        echo -e "Updating package lists and install sudo"
+        apt-get update -y && apt-get install -y sudo
+
         $(sudo chmod +x $(pwd)/installers/debian.sh)
         $(echo  "${currentDir}/installers/debian.sh")
     elif grep -q 'arch' /etc/os-release; then
@@ -44,6 +49,7 @@ findLinuxDistributionAndInstall() {
 
     SetPHPVersionInNginxConfig
     moveConfigurationFile
+    startServices
 }
 
 SetPHPVersionInNginxConfig() {
@@ -55,9 +61,21 @@ moveConfigurationFile() {
     echo -e "Moving Nginx configuration file..."
     sudo mv default /etc/nginx/sites-available/
 
+    # Remove default config in sites-enabled if exists and symlink it
+    sudo rm /etc/nginx/sites-enabled/default
+    sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
     #Move php testing file
     echo -e "Moving php testing file..."
     sudo mv info.php /var/www/html/
+}
+
+startServices() {
+    echo -e "Start Nginx"
+    sudo service nginx start
+
+    echo -e "Start PHP7.3-fpm"
+    sudo service php7.3-fpm start
 
     echo -e "Lemp stack installed successfully :)"
     echo -e "Open following link to check installed PHP configuration your_ip/info.php"
